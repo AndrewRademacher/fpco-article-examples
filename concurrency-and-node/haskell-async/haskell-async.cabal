@@ -1,0 +1,56 @@
+name:          haskell-async
+version:       0.1.0.0
+synopsis:      Simple project template from stack
+description:   Please see README.md
+homepage:      http://github.com/githubuser/haskell-async#readme
+license:       MIT
+license-file:  LICENSE
+author:        Author name here
+maintainer:    example@example.com
+copyright:     2010 Author Here
+category:      Web
+build-type:    Simple
+cabal-version: >=1.10
+
+executable haskell-async-local
+  main-is:           LocalMain.hs
+  hs-source-dirs:    src
+  default-language:  Haskell2010
+
+  ghc-options:       -rtsopts -threaded -with-rtsopts=-N
+
+  build-depends:     base
+
+                   , async
+                   , time
+
+executable haskell-async-remote
+  main-is:           RemoteMain.hs
+  hs-source-dirs:    src
+  default-language:  Haskell2010
+
+  ghc-options:       -rtsopts -threaded -with-rtsopts=-N
+
+  build-depends:     base
+
+                   , async
+                   , lens
+                   , lens-aeson
+                   , time
+                   , wreq
+
+executable haskell-async-starvation
+  main-is:           StarvationMain.hs
+  hs-source-dirs:    src
+  default-language:  Haskell2010
+
+  ghc-options:       -rtsopts
+
+  build-depends:     base
+
+                   , mtl
+                   , servant
+                   , servant-server
+                   , text
+                   , wai
+                   , warp

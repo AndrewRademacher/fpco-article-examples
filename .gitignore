@@ -1,0 +1,17 @@
+# Haskell
+.shake/
+.stack-work/
+_cache/
+_site/
+
+# Node
+node_modules/
+
+# Emacs
+*#
+*~
+.#*
+
+# OSX
+.DS_Store
+*/.DS_Store

@@ -1,0 +1,9 @@
+resolver: lts-7.11
+
+docker:
+  enable: true
+
+packages:
+  - './haskell-async'
+  - './slow-web-server'
+  - './starvation-tester'

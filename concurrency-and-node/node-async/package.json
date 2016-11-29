@@ -1,0 +1,21 @@
+{
+  "name": "node-async",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/local-main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "local": "node src/local-main.js",
+    "remote": "node src/remote-main.js",
+    "starvation": "node src/starvation-main.js"
+  },
+  "author": "Andrew Rademacher",
+  "license": "MIT",
+  "dependencies": {
+    "async": "^2.1.2",
+    "express": "^4.14.0",
+    "promise-async": "^0.2.0",
+    "request": "^2.76.0",
+    "request-promise": "^4.1.1"
+  }
+}
