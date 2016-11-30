@@ -15,7 +15,6 @@ with URI*.
   webserver`. Wait for it to say "Example Server Running".
 * Open a new terminal tab in this directory and execute the command
   `make execute`.
-* Enjoy.
 
 ### Instructions - Starvation Test
 
@@ -27,4 +26,8 @@ with URI*.
   Starvation Server Running".
 * Open a new terminal tab in this directory and execute the command
   `make starvation`.
-* Enjoy.
+
+### Instructions - Thread Spawn
+
+* Open a terminal tab in this directory and execute the command `make
+  thread-spawn`.
