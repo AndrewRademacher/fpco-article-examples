@@ -7,3 +7,4 @@ packages:
   - './haskell-async'
   - './slow-web-server'
   - './starvation-tester'
+  - './haskell-thread-spawn'

@@ -22,10 +22,14 @@ starvation-server-haskell: .stack-work
 starvation: .stack-work
 	stack exec -- starvation-tester
 
+thread-spawn: .stack-work
+	stack exec -- haskell-thread-spawn +RTS -sout
+	cat out
+
 .stack-work:
 	stack docker pull
 	stack setup
-	stack build haskell-async starvation-tester
+	stack build
 
 node-async/node_modules:
 	(cd node-async && npm install)
