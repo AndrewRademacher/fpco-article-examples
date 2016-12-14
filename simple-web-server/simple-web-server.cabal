@@ -20,6 +20,4 @@ executable simple-web-server
   ghc-options:       -rtsopts
 
   build-depends:     base
-
                    , scotty
-                   , text

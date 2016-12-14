@@ -2,28 +2,39 @@
 
 module Main where
 
-import Data.Monoid
-import qualified Data.Text.Lazy as LT
 import Web.Scotty
 
 main :: IO ()
 main = scotty 3000 $ do
-  get "/add/:a/:b" $ binaryMathRoute (+)
-  get "/sub/:a/:b" $ binaryMathRoute (-)
-  get "/mul/:a/:b" $ binaryMathRoute (*)
-  get "/div/:a/:b" $ binaryMathRoute div
-  get "/rem/:a/:b" $ binaryMathRoute rem
+  get "/message" $ html "Hello World!"
 
-  get "/float_div/:a/:b" $ binaryMathRoute (/)
 
-renderResult :: (Show a) => a -> ActionM ()
-renderResult x = html $ mconcat ["<h1>", LT.pack (show x), "</h1>"]
+-- {-# LANGUAGE OverloadedStrings #-}
 
-binaryMathRoute :: (Read a, Show a) => (a -> a -> a) -> ActionM ()
-binaryMathRoute op = performBinaryOperation op >>= renderResult
+-- module Main where
 
-performBinaryOperation :: (Read a) => (a -> a -> a) -> ActionM a
-performBinaryOperation op = do
-  a <- param "a"
-  b <- param "b"
-  return (read a `op` read b)
+-- import Data.Monoid
+-- import qualified Data.Text.Lazy as LT
+-- import Web.Scotty
+
+-- main :: IO ()
+-- main = scotty 3000 $ do
+--   get "/add/:a/:b" $ binaryMathRoute (+)
+--   get "/sub/:a/:b" $ binaryMathRoute (-)
+--   get "/mul/:a/:b" $ binaryMathRoute (*)
+--   get "/div/:a/:b" $ binaryMathRoute div
+--   get "/rem/:a/:b" $ binaryMathRoute rem
+
+--   get "/float_div/:a/:b" $ binaryMathRoute (/)
+
+-- renderResult :: (Show a) => a -> ActionM ()
+-- renderResult x = html $ mconcat ["<h1>", LT.pack (show x), "</h1>"]
+
+-- binaryMathRoute :: (Read a, Show a) => (a -> a -> a) -> ActionM ()
+-- binaryMathRoute op = performBinaryOperation op >>= renderResult
+
+-- performBinaryOperation :: (Read a) => (a -> a -> a) -> ActionM a
+-- performBinaryOperation op = do
+--   a <- param "a"
+--   b <- param "b"
+--   return (read a `op` read b)
