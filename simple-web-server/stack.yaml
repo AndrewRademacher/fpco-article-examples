@@ -1,4 +1,1 @@
-resolver: lts-7.12
-
-docker:
-  enable: true
+resolver: lts-6.25

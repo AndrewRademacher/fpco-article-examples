@@ -21,3 +21,4 @@ executable simple-web-server
 
   build-depends:     base
                    , scotty
+                   , text
